@@ -1,0 +1,25 @@
+
+Learn Protocol Basics & Data Flow
+=================================
+
+I utilized a Python script built with the Scapy library to capture and analyze live network traffic.
+The script was configured to capture 10 packets and extract key fields from each packet, including:
+    • Source and destination IP addresses
+    • Protocol number
+    • Source and destination ports
+    • Payload data
+
+Observations:
+    • Most packets used Protocol 17 (UDP).
+    • The destination port 443 was common, which typically corresponds to HTTPS over TCP,
+      but since the protocol was UDP, this indicated usage of QUIC — a modern transport protocol
+      employed by browsers like Google Chrome for faster, secure connections.
+    • The payload data appeared in binary or escaped hexadecimal format, consistent with encrypted
+      or encoded content exchanged during secure web communications.
+    • The IP addresses, such as 142.250.200.142, belonged to Google servers,
+      confirming the traffic was part of an active HTTPS session.
+
+Conclusion:
+This exercise deepened my understanding of how different network layers—IP, UDP, and Raw payload—interact.
+It also provided practical insight into interpreting real-time data exchanges in structured protocol formats,
+especially in modern web traffic contexts.
